@@ -1,3 +1,5 @@
+// Written by Jens Heukers.
+
 #include "managed.h"
 
 void open_entity::Managed::GetChildren(std::vector<Managed*>& pChildren) {
@@ -9,6 +11,6 @@ void open_entity::Managed::SetParent(Managed* pParent) {
 	pParent = m_parent;
 }
 
-void open_entity::Managed::GetParent(Managed& pParent) { 
-	pParent = *m_parent;
+open_entity::Managed* open_entity::Managed::GetParent() { 
+	return m_parent;
 }
